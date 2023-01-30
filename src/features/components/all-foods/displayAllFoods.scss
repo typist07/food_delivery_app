@@ -1,0 +1,91 @@
+@use '../../../styles/variables' as *;
+
+.search__widget {
+    width: 20rem !important;
+    padding: 7px;
+    border: 1px solid $secondary;
+
+    & span {
+        cursor: pointer;
+    }
+
+    & input {
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.sorting__widget {
+    & select {
+        width: 15rem !important;
+        padding: 7px;
+        border: 1px solid $secondary;
+        border-radius: 5px;
+        cursor: pointer;
+
+        & input {
+            border: none;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+.pagination {
+    padding: 10px;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+
+    & button {
+        padding: 0.7rem 1.1rem;
+        border: 1px solid grey;
+        border-radius: 5px;
+        margin: 0 0.5rem;
+        background-color: transparent;
+        transition: 0.4s;
+        color: $dark;
+
+        &:hover {
+            background-color: $primary;
+            color: $font-light;
+        }
+    }
+
+    & .pagination__disable {
+        opacity: 0;
+    }
+
+    & .page__selected {
+        background-color: $primary;
+        color: $font-light;
+    }
+}
+
+@media only screen and (max-width:568px) {
+    .search__widget {
+        width: 10rem !important;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .search__widget {
+        width: 100%;
+        margin-bottom: 20px;
+
+        & input {
+            width: 100%;
+            font-size: 0.8rem;
+        }
+    }
+
+    .sorting__widget select {
+        width: 50% !important;
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,91 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as productCard;
+
+.product__item {
+    border: 1px solid $secondary;
+    text-align: center;
+    padding: 30px;
+    cursor: pointer;
+
+    .product__img {
+        margin-bottom: 20px;
+        transition: 0.4s;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    .product__content {
+        & h5 {
+            margin-bottom: 20px;
+
+            & a {
+                color: $dark;
+                margin-bottom: 30px;
+                text-decoration: none;
+                font-size: 1rem;
+            }
+        }
+
+        .product__price {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: $primary;
+        }
+
+        .addTOCart__btn {
+            @include productCard.button;
+        }
+
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .product__item {
+        padding: 20px;
+
+        .product__content {
+            & h5 a {
+                font-size: 0.8rem;
+            }
+
+            .addTOCart__btn {
+                padding: 5px 15px;
+                font-size: 0.7rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:369px) and (max-width:568px) {
+    .product__item {
+        .product__content {
+            .addTOCart__btn {
+                padding: 5px 0.7rem;
+                font-size: 0.6rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:369px) {
+    .product__item {
+        .product__content {
+            .addTOCart__btn {
+                padding: 0.1rem 0.7rem;
+                font-size: 0.4rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width:1200px) {
+    .product__item {
+        .product__content {
+            .addTOCart__btn {
+                padding: 5px 15px;
+            }
+        }
+    }
+}

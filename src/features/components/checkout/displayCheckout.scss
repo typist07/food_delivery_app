@@ -1,0 +1,56 @@
+@use '../../../styles/variables' as *;
+
+.checkout__bill {
+    background: $secondary;
+    padding: 30px;
+}
+
+.checkout__total {
+    border-top: 1px solid #ddd;
+    padding-top: 30px;
+}
+
+.checkout__form {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+
+    .form__group {
+        margin-bottom: 30px;
+
+        & p {
+            display: none;
+        }
+
+        & input {
+            width: 100%;
+            background: transparent;
+            padding: 7px 20px;
+            border: none;
+            border-bottom: 1px solid #2122454c;
+
+            &:focus {
+                outline: none;
+
+                &:invalid {
+                    border: 1px solid red;
+                }
+
+                &:invalid~p {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .checkout__bill h6 {
+        font-size: 0.9rem;
+    }
+
+    .checkout__bill {
+        margin-top: 40px;
+    }
+}

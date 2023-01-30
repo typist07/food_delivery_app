@@ -1,0 +1,44 @@
+@use '../../../../styles/variables' as *;
+
+
+.feature__subtitle {
+    color: $primary;
+}
+
+.feature__title {
+    & span {
+        color: $primary;
+    }
+}
+
+.feature__text {
+    color: $font-dark;
+}
+
+.feature__item {
+    & p {
+        color: $font-dark;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .feature__subtitle {
+        font-size: 1rem;
+    }
+
+    .feature__text {
+        font-size: 0.8rem;
+        margin-bottom: 0;
+    }
+
+    .feature__item {
+        & p {
+            font-size: 0.8rem;
+            margin-bottom: 0;
+        }
+
+        & h5 {
+            font-size: 0.9rem;
+        }
+    }
+}

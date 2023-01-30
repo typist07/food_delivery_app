@@ -1,0 +1,147 @@
+@use '../../../../styles/variables' as *;
+@use '../../../../styles/mixins' as introHome;
+
+.hero__content {
+    padding-top: 70px;
+
+    & p {
+        font-size: 1rem;
+        line-height: 30px;
+        color: $font-dark
+    }
+
+    .hero__title {
+        font-size: 2.5rem;
+        line-height: 55px;
+
+        & span {
+            color: $primary
+        }
+    }
+
+    .hero__btns {
+        & button {
+            @include introHome.button;
+            font-weight: 600;
+        }
+
+        .order__btn {
+            background: $primary;
+            transition: 0.6s;
+
+            & a {
+                color: $font-light;
+                text-decoration: none;
+            }
+
+            &:hover {
+                background: $font-light;
+
+                a {
+                    color: $primary;
+                }
+            }
+        }
+
+        .all__foods-btn {
+            background: transparent;
+            border: 1px solid $primary;
+            transition: 0.6s;
+
+            & a {
+                color: $primary;
+                text-decoration: none;
+            }
+
+            &:hover {
+                background: $primary;
+
+                a {
+                    color: $font-light;
+                }
+            }
+        }
+    }
+
+    .hero__service {
+        & p {
+            color: $dark;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .shipping__icon i {
+            padding: 5px;
+            background: $primary;
+            color: $font-light;
+            border-radius: 50%;
+            font-weight: 500 !important;
+        }
+    }
+}
+
+
+@media only screen and (max-width:768px) {
+    .hero__content {
+        & h5 {
+            font-size: 1rem;
+        }
+
+        & p {
+            font-size: 0.8rem;
+            line-height: 25px;
+        }
+
+        .hero__title {
+            font-size: 1.5rem;
+            line-height: 40px;
+        }
+
+        .hero__btns {
+            & button {
+                padding: 5px 15px;
+                font-size: 0.7rem;
+            }
+        }
+
+        .hero__service {
+            & p {
+                font-size: 0.7rem !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .hero__content {
+        text-align: center;
+
+        & h5 {
+            font-size: 1rem;
+        }
+
+        & p {
+            font-size: 0.8rem;
+            line-height: 25px;
+        }
+
+        .hero__title {
+            font-size: 1.5rem;
+            line-height: 40px;
+        }
+
+        .hero__btns {
+            justify-content: center;
+
+            & button {
+                padding: 5px 15px;
+                font-size: 0.7rem;
+            }
+        }
+
+        .hero__service {
+            justify-content: center;
+        }
+
+    }
+}

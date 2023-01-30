@@ -1,0 +1,26 @@
+@use '../../../../styles/variables' as *;
+
+.testimonial__subtitle {
+    color: $primary;
+}
+
+.testimonial__title {
+    & span {
+        color: $primary;
+    }
+}
+
+.testimonial__desc {
+    color: $font-dark;
+    line-height: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .testimonial__subtitle {
+        font-size: 1rem;
+    }
+
+    .testimonial__desc {
+        font-size: 0.8rem;
+    }
+}

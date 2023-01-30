@@ -1,0 +1,30 @@
+@use '../../../../styles/variables' as *;
+
+.category__item {
+    background: $secondary;
+    padding: 30px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+
+    &:hover {
+        transform: translateY(-35px);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .category__item {
+        padding: 20px 15px;
+
+        .category__img {
+            & img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        & h6 {
+            font-size: 0.8rem;
+        }
+    }
+}

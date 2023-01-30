@@ -1,0 +1,44 @@
+@use '../../styles/variables' as *;
+
+.cart__item {
+    padding-bottom: 20px;
+    border-bottom: 1px solid $secondary;
+
+    .cart__item-info {
+        & img {
+            width: 35px;
+            height: 35px;
+            object-fit: cover;
+        }
+
+        .cart__product-title {
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .cart__product-price {
+            font-size: 0.8rem;
+
+            & span {
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: $primary;
+            }
+        }
+
+        .increase__decrease-btn {
+            background: $secondary;
+            padding: 2px 3px;
+
+            .increase__btn,
+            .decrease__btn {
+                cursor: pointer;
+            }
+        }
+
+        .delete__btn {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+    }
+}

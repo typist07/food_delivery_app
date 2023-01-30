@@ -1,0 +1,53 @@
+@use '../../../../styles/variables' as *;
+
+.why__tasty-treat {
+    .tasty__treat-desc {
+        color: $font-dark;
+        line-height: 28px;
+    }
+
+    .tasty__treat-title {
+        & span {
+            color: $primary;
+        }
+    }
+
+    .choose__us-title {
+        font-weight: 600;
+        margin-bottom: 10px;
+
+        & i {
+            font-weight: 500 !important;
+            color: $primary;
+        }
+    }
+
+    .choose__us-desc {
+        color: $font-dark;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .why__choose-us {
+        padding-top: 0 !important;
+
+        .tasty__treat-desc {
+            font-size: 0.8rem;
+            margin-bottom: 0;
+        }
+
+        .choose__us-title {
+            font-size: 0.8rem;
+        }
+
+        .choose__us-desc {
+            font-size: 0.7rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .why__choose-us {
+        padding-top: 0 !important;
+    }
+}

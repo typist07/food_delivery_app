@@ -1,0 +1,35 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as displayCart;
+
+.cart__img-box {
+    width: 80px;
+
+    & img {
+        width: 100%;
+    }
+}
+
+.cart__item-del i {
+    cursor: pointer;
+}
+
+.addTOCart__btn {
+    @include displayCart.button;
+
+    &:hover a {
+        color: $primary;
+    }
+
+    & a {
+        color: $font-light;
+        text-decoration: none;
+    }
+}
+
+.cart__subtotal {
+    color: $primary;
+}
+
+.cart__page-btn {
+    display: flex;
+}

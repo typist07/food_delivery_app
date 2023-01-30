@@ -1,0 +1,165 @@
+@use '../../styles/variables' as *;
+
+.footer {
+    padding: 50px 0 30px 0;
+    background: $secondary;
+
+    .footer__logo {
+        & img {
+            width: calc(100% - 80%);
+        }
+
+        & h5 {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        & p {
+            font-size: 0.9rem;
+            color: #333;
+            line-height: 28px;
+        }
+    }
+
+    .footer__title {
+        font-size: 1.1rem;
+        color: $dark;
+        font-weight: 600;
+    }
+
+    .delivery__time-item {
+        background: transparent !important;
+
+        & span {
+            font-weight: 600;
+            font-size: 1rem;
+            color: $dark;
+        }
+
+        & p {
+            color: $dark;
+        }
+    }
+
+    .newsletter {
+        padding: 5px;
+        border: 1px solid $dark;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        & input {
+            background: transparent;
+            border: none;
+            outline: none;
+
+            &:focus {
+                outline: none
+            }
+
+            &::placeholder {
+                color: $dark;
+            }
+        }
+
+        & span {
+            background: $primary;
+            padding: 5px 20px;
+            border-radius: 5px;
+
+            & i {
+                color: $font-light;
+
+            }
+        }
+    }
+
+    .copyright__text {
+        font-size: 0.8rem;
+        color: $primary;
+    }
+
+    .social__links span i {
+        padding: 5px;
+        background: $dark;
+        color: $font-light;
+        border-radius: 50%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .footer {
+        .footer__title {
+            font-size: 0.9rem;
+        }
+
+        .delivery__time-item {
+            & span {
+                font-size: 0.8rem;
+            }
+
+            & p {
+                font-size: 0.7rem;
+                margin-bottom: 0;
+            }
+        }
+
+        .newsletter {
+            & input {
+                padding: 10px 7px;
+                font-size: 0.7rem;
+            }
+
+            & span {
+                padding: 4px 20px;
+                font-size: 0.7rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .footer {
+        .footer__logo {
+            & img {
+                width: calc(100% - 90%);
+            }
+        }
+
+        .social__links {
+            justify-content: center;
+
+            & span {
+                padding: 4px;
+
+                & a {
+                    font-size: 0.7rem;
+                }
+            }
+
+
+            & p {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .footer {
+        .newsletter {
+            & input {
+                padding: 7px;
+                font-size: 0.7rem;
+            }
+
+            & span {
+                padding: 4px 25px;
+                font-size: 0.7rem;
+            }
+        }
+    }
+}

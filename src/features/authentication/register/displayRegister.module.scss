@@ -1,0 +1,25 @@
+@use '../../../styles/variables' as *;
+
+.form {
+    width: 60% !important;
+    margin: auto;
+    padding: 20px;
+    background: $secondary;
+    border-radius: 5px;
+
+    .form__group {
+        margin-bottom: 30px;
+    }
+
+    .form__group input {
+        width: 100%;
+        background: transparent;
+        padding: 7px 20px;
+        border: none;
+        border-bottom: 1px solid $dark;
+    }
+
+    .form__group input:focus {
+        outline: none;
+    }
+}

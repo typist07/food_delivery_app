@@ -1,0 +1,79 @@
+@use '../../styles/variables' as *;
+
+.cart__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.639);
+    z-index: 99999;
+
+    .cart {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 400px;
+        height: 100%;
+        background: $font-light;
+        z-index: 999999;
+
+        .cart__close {
+            width: 100%;
+            height: 60px;
+            top: 0;
+            left: 0;
+            padding: 10px 15px;
+
+            & span i {
+                font-size: 1.1rem;
+                background: $dark;
+                padding: 5px;
+                border-radius: 50%;
+                cursor: pointer;
+                color: $font-light;
+            }
+        }
+
+        .cart__item-list {
+            height: calc(100vh - 140px);
+            overflow-y: scroll;
+        }
+
+        .cart__bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 10px 20px;
+            width: 100%;
+            height: 80px;
+            background: $primary;
+
+            & h6 {
+                font-size: 1rem;
+                color: $font-light;
+
+                & span {
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                }
+            }
+
+            & button {
+                border: none;
+                padding: 4px 20px;
+                border-radius: 5px;
+                background: $font-light;
+                color: $dark;
+
+                & a {
+                    color: $dark;
+                    text-decoration: none;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+
+}

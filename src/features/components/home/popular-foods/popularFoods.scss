@@ -1,0 +1,51 @@
+@use '../../../../styles/variables' as *;
+
+
+.food__category {
+    background: $primary;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px 0;
+    border-radius: 8px;
+
+    & button {
+        border: none;
+        outline: none;
+        padding: 7px 20px;
+        background: transparent;
+        color: $font-light;
+
+        & img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .foodBtnActive {
+        background: $font-light !important;
+        border-radius: 6px;
+        color: $primary !important;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .food__category {
+        padding: 15px;
+
+        & button {
+            padding: 5px 15px;
+            font-size: 0.7em;
+        }
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .food__category {
+        padding: 15px;
+
+        & button {
+            padding: 5px 0.3rem;
+            font-size: 0.7rem;
+        }
+    }
+}
