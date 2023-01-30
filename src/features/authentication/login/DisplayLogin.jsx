@@ -70,7 +70,7 @@ const DisplayLogin = () => {
                                         />
                                     </div>
                                     <button type="submit" className="addTOCart__btn">
-                                        Login!!
+                                        Login
                                     </button>
                                 </> :
                                     <button type="submit" className="addTOCart__btn" onClick={logoutHandler}>
